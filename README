@@ -105,3 +105,12 @@ METHODS
 OVERLOADED METHODS
     new, inflate_result, store_column
 
+SEE ALSO
+    DBIx::Class, DBIx::Class::FrozenColumns.
+
+AUTHOR
+    Pronin Oleg <syber@cpan.org>
+
+LICENSE
+    You may distribute this code under the same terms as Perl itself.
+

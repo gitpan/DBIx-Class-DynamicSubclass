@@ -3,7 +3,7 @@ use base qw/DBIx::Class/;
 use strict;
 use warnings;
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 __PACKAGE__->mk_group_accessors(inherited => qw/_typecast_map typecast_column/);
 
@@ -117,6 +117,18 @@ result source in order to use dynamic subclassing (second way).
 =head1 OVERLOADED METHODS
 
 new, inflate_result, store_column
+
+=head1 SEE ALSO
+
+L<DBIx::Class>, L<DBIx::Class::FrozenColumns>.
+
+=head1 AUTHOR
+
+Pronin Oleg <syber@cpan.org>
+
+=head1 LICENSE
+
+You may distribute this code under the same terms as Perl itself.
 
 =cut
 

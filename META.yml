@@ -1,7 +1,8 @@
 ---
 name: DBIx-Class-DynamicSubclass
-version: 0.01
-author: []
+version: 0.02
+author:
+  - 'Pronin Oleg <syber@cpan.org>'
 abstract: Convenient way to use dynamic subclassing.
 license: perl
 resources:
@@ -13,7 +14,7 @@ build_requires:
 provides:
   DBIx::Class::DynamicSubclass:
     file: lib/DBIx/Class/DynamicSubclass.pm
-    version: 0.01
+    version: 0.02
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
