@@ -6,6 +6,14 @@ use DSCTest;
 
 BEGIN { use_ok('DBIx::Class::DynamicSubclass') };
 
+SKIP: {
+    skip "requires DBD::SQLite && SQL::Translator for testing.", 12
+        unless eval { require DBD::SQLite; require SQL::Translator; 1 };
+    do_tests();
+}
+
+sub do_tests {
+
 my $schema = DSCTest->init;
 my $rss    = $schema->resultset('SourceStatic');
 my $rsd    = $schema->resultset('SourceDynamic');
@@ -35,6 +43,8 @@ foreach my $row ([$rss, 'Static subclassing'], [$rsd, 'Dynamic subclassing']) {
 
     $obj = $rs->single({id => $obj->id});
     is ref($obj), "$base\::Type1", "$what: inflate_result subclass";
+}
+
 }
 
 1;

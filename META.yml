@@ -1,21 +1,21 @@
 ---
-name: DBIx-Class-DynamicSubclass
-version: 0.02
+abstract: 'Convenient way to use dynamic subclassing.'
 author:
   - 'Pronin Oleg <syber@cpan.org>'
-abstract: Convenient way to use dynamic subclassing.
+build_requires:
+  DBD::SQLite: 1.13
+  SQL::Translator: 0.08
+distribution_type: module
+generated_by: 'Module::Install version 0.71'
 license: perl
-resources:
-  license: http://dev.perl.org/licenses/
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.3.html
+  version: 1.3
+name: DBIx-Class-DynamicSubclass
+no_index:
+  directory:
+    - inc
+    - t
 requires:
   DBIx::Class: 0.07003
-build_requires:
-  DBD::SQLite: 1.11
-provides:
-  DBIx::Class::DynamicSubclass:
-    file: lib/DBIx/Class/DynamicSubclass.pm
-    version: 0.02
-generated_by: Module::Build version 0.2808
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+version: 0.03
